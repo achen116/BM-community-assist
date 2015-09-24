@@ -10,7 +10,7 @@
 .story-content {
 	float: right;
 	width: 45%;
-	margin: 110px;
+	margin: 110px 110px 0px 110px;
 	text-align: center;
 }
 
@@ -25,7 +25,6 @@
 
 #post-story {
 	background-color: #000;
-	height: auto;
 }
 
 #post-story .container {
@@ -33,6 +32,7 @@
 	padding-bottom: 20px;
 }
 
-#post-story h3 {
+#post-story h4 {
+	color: #FFF;
 	margin: 0px;
 }
