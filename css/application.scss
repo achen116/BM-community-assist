@@ -1,7 +1,7 @@
 @import "header";
 @import "video";
 
-#st-johns-story {
+#story {
 	height: 650px;
 	background:
 		url(../img/story-full-court.png);
@@ -10,18 +10,18 @@
 	margin-top: -40px;
 }
 
-.story {
+.story-content {
 	float: right;
-	width: 40%;
-	margin: 110px 140px 0px 140px;
+	width: 45%;
+	margin: 110px;
 	text-align: center;
 }
 
-.story > img {
+.story-content > img {
 	margin-bottom: 10px;
 }
 
-.story > p {
+.story-content > p {
 	font-size: 22px;
 	line-height: 1.25;
 }
