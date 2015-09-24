@@ -1,0 +1,30 @@
+.container *{
+  box-sizing: border-box; 
+}
+
+.container {
+	width: 1200px;
+	margin: 0px auto;
+	text-align: center;
+}
+
+.row:before,
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+[class*='col-'] {
+	float: left;
+	min-height: 1px;
+	width: 200px;
+	padding: 25px;
+}
+
+.col-1 { width: 200px;  }
+.col-2 { width: 400px;  }
+.col-3 { width: 600px;  }
+.col-4 { width: 800px;  }
+.col-5 { width: 1000px; }
+.col-6 { width: 1200px; }
