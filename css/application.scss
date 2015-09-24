@@ -1,2 +1,11 @@
 @import "header";
 @import "video";
+
+#st-johns-story {
+	height: 650px;
+	background:
+		url(../img/story-full-court.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin-top: -40px;
+}
