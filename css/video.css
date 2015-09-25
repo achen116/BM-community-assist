@@ -1,16 +1,16 @@
-h4 {
+/*h4 {
 	font-family: DisplayProBold;
 	font-size: 1.5em;
 }
+*/
 
 #video {
-	height: auto;
-	background-color: #000;
 	color: #FFF;
+	background-color: #000;
 }
 
 #video p {
-	font-family: DisplayProReg;
-	font-size: 18px;
+	/*font-family: DisplayProReg;*/
+	/*font-size: 18px;*/
 	margin: 0px;
 }

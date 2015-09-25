@@ -1,4 +1,4 @@
-h3 {
+/*h3 {
 	font-family: TextProBold;
 	font-size: 2em;
 	margin: 0px;
@@ -9,27 +9,29 @@ h5 {
 	font-size: 1.25em;
 	margin-bottom: 0px;
 	color: #000;
-}
+}*/
 
 footer {
+	color: #000;
 	height: 600px;
 	background: url(../img/footer-dots.png);
 }
 
-footer h3 {
+/*footer h3 {
 	color: #000;
 	padding-top: 25px;
-}
+}*/
 
-footer p {
+.social {
 	font-family: TextProReg;
 	font-size: 16px;
-	color: #000;
-	margin-top: 0px
+	/*color: #000;*/
+	/*margin-top: 0px*/
 }
 
 .hashtags {
 	font-family: TextProBold;
+	font-size: 16px;
 	color: #5C2C81;
 }
 
@@ -53,6 +55,6 @@ button {
 }
 
 .deadline > p {
-	font-family: DisplayProReg;
-	font-size: 22px;
+	/*font-family: DisplayProReg;*/
+	/*font-size: 22px;*/
 }

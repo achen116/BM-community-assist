@@ -1,4 +1,5 @@
 #story {
+  color: #000;
 	height: 650px;
 	background:
 		url(../img/story-full-court.png);
@@ -19,16 +20,17 @@
 }
 
 .story-content > p {
-	font-family: DisplayProReg;
-	font-size: 22px;
-	line-height: 1.25;
+	/*font-family: DisplayProReg;*/
+	/*font-size: 22px;*/
+	/*line-height: 1.25;*/
 }
 
 #post-story {
+	color: #FFF;
 	background-color: #000;
 }
 
-#post-story h4 {
+/*#post-story h4 {
 	color: #FFF;
 	margin: 0px;
-}
+}*/
