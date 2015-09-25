@@ -57,6 +57,7 @@ h5 {
 p {
 	font-family: DisplayProReg;
 	font-size: 22px;
+	margin: 0px;
 }
 
 /* --------------------- HEADER --------------------- */
@@ -100,7 +101,10 @@ p {
 
 #video p {
 	font-size: 18px;
-	margin: 0px;
+}
+
+#video h4 {
+	margin: 25px;
 }
 
 /* --------------------- STORY --------------------- */
@@ -127,7 +131,7 @@ p {
 }
 
 .story-content > img {
-	margin-bottom: 10px;
+	margin-bottom: 25px;
 }
 
 /* -------------------- VOTING -------------------- */
@@ -135,6 +139,7 @@ p {
 #voting {
 	color: #000;
 	height: 600px;
+	padding-top: 15px;
 	background: url(../img/footer-dots.png);
 }
 
@@ -146,12 +151,14 @@ i {
 .social {
 	font-family: TextProReg;
 	font-size: 16px;
+	margin-bottom: 15px;
 }
 
 .hashtags {
 	font-family: TextProBold;
 	font-size: 16px;
 	color: #5C2C81;
+	margin-bottom: 15px;
 }
 
 button {
@@ -162,7 +169,7 @@ button {
 	border: 0px;
 	box-shadow: 5px 5px rgba(155,155,155,0.6);
 	margin-bottom: 10px;
-	padding: 10px 15px;
+	padding: 10px 15px 10px 15px;
 }
 
 .deadline {
