@@ -3,7 +3,7 @@
 }
 
 .container {
-	width: 1200px;
+	width: 1024px;
 	margin: 0px auto;
 	text-align: center;
 }
@@ -22,9 +22,9 @@
 	padding: 25px;
 }
 
-.col-1 { width: 200px;  }
-.col-2 { width: 400px;  }
-.col-3 { width: 600px;  }
-.col-4 { width: 800px;  }
-.col-5 { width: 1000px; }
-.col-6 { width: 1200px; }
+.col-1 { width: 16.67%; }
+.col-2 { width: 33.33%; }
+.col-3 { width: 50%;    }
+.col-4 { width: 66.67%; }
+.col-5 { width: 83.33%; }
+.col-6 { width: 100%;   }

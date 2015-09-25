@@ -1,4 +1,5 @@
 h1 {
+	font-family: DisplayProBold;
 	font-size: 5em;
 	color: #5C2C81;
 	text-align: center;
@@ -7,6 +8,7 @@ h1 {
 }
 
 h2 {
+	font-family: DisplayProBold;
 	font-size: 2.5em;
 	color: #5C2C81;
 	text-align: center;
@@ -25,14 +27,17 @@ h2 {
 
 #logos {
 	float: left;
-	padding-top: 70px;
-	padding-left: 50px;
+	padding-top: 75px;
+}
+
+#logos img {
+	width: 300px;
 }
 
 #vote {
 	float: right;
 	padding-top: 40px;
-	padding-right: 100px;
+	padding-right: 55px;
 }
 
 #purple-bar {
