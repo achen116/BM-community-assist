@@ -1,29 +1,3 @@
-@import "header";
-@import "video";
-@import "story";
-
-@font-face {
-	font-family: DisplayProReg;
-	src: url(../fonts/PFDinDisplayPro-Regular.ttf);
-}
-
-@font-face {
-	font-family: DisplayProBold;
-	src: url(../fonts/PFDinDisplayPro-Bold.ttf);
-	font-weight: bold;
-}
-
-@font-face {
-	font-family: TextProReg;
-	src: url(../fonts/PFDinTextPro-Regular.ttf);
-}
-
-@font-face {
-	font-family: TextProBold;
-	src: url(../fonts/PFDinTextPro-Bold.ttf);
-	font-weight: bold;
-}
-
 h3 {
 	font-family: TextProBold;
 	font-size: 2em;
