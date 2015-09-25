@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 /* --------------------- CUSTOM GRID --------------------- */
 .container *{
   box-sizing: border-box; 
