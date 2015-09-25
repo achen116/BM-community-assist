@@ -1,4 +1,4 @@
-.container *{
+/*.container *{
   box-sizing: border-box; 
 }
 
@@ -27,4 +27,4 @@
 .col-3 { width: 50%;    }
 .col-4 { width: 66.67%; }
 .col-5 { width: 83.33%; }
-.col-6 { width: 100%;   }
+.col-6 { width: 100%;   }*/
