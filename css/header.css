@@ -1,13 +1,13 @@
-#logos {
+/*.logos {
 	float: left;
 	padding-top: 75px;
 }
 
-#logos img {
+.logos img {
 	width: 300px;
 }
 
-#vote {
+.vote {
 	float: right;
 	padding-top: 40px;
 	padding-right: 55px;
@@ -16,4 +16,4 @@
 #purple-bar {
 	height: 5px;
 	background-color: #5C2C81;
-}
+}*/

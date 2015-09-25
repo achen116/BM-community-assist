@@ -59,7 +59,7 @@ p {
 	font-size: 22px;
 }
 
-/* -------------------- SECTIONS -------------------- */
+/* --------------------- HEADER --------------------- */
 
 #header {
 	color: #5C2C81;
@@ -71,10 +71,39 @@ p {
 	background-position: center;
 }
 
+.logos {
+	float: left;
+	padding-top: 75px;
+}
+
+.logos img {
+	width: 300px;
+}
+
+.vote {
+	float: right;
+	padding-top: 40px;
+	padding-right: 55px;
+}
+
+#purple-bar {
+	height: 5px;
+	background-color: #5C2C81;
+}
+
+/* --------------------- VIDEO --------------------- */
+
 #video {
 	color: #FFF;
 	background-color: #000;
 }
+
+#video p {
+	font-size: 18px;
+	margin: 0px;
+}
+
+/* --------------------- STORY --------------------- */
 
 #story {
   color: #000;
@@ -90,8 +119,52 @@ p {
 	background-color: #000;
 }
 
+.story-content {
+	float: right;
+	width: 45%;
+	margin: 110px 110px 0px 110px;
+	text-align: center;
+}
+
+.story-content > img {
+	margin-bottom: 10px;
+}
+
+/* -------------------- VOTING -------------------- */
+
 #voting {
 	color: #000;
 	height: 600px;
 	background: url(../img/footer-dots.png);
+}
+
+i {
+	color: #5C2C81;
+	margin-bottom: 20px;
+}
+
+.social {
+	font-family: TextProReg;
+	font-size: 16px;
+}
+
+.hashtags {
+	font-family: TextProBold;
+	font-size: 16px;
+	color: #5C2C81;
+}
+
+button {
+	font-family: TextProReg;
+	color: #FFF;
+	background-color: #5C2C81;
+	border-radius: 5px;
+	border: 0px;
+	box-shadow: 5px 5px rgba(155,155,155,0.6);
+	margin-bottom: 10px;
+	padding: 10px 15px;
+}
+
+.deadline {
+	margin-top: 20px;
 }
