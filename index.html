@@ -1,512 +1,527 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Vote for Ben</title>
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<meta	charset="UTF-8"/>
+<head>
+	<title>Vote for Ben</title>
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta	charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-		<!-- jQuery -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		
-		<!-- JavaScript -->
-		<script src="js/application.js"></script>
+	<!-- jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<style type="text/css">
+		/* --------------------- CUSTOM GRID --------------------- */
+		body {
+		  margin: 0;
+		}
 
-		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		.container *{
+		  box-sizing: border-box; 
+		}
 
-		<style type="text/css">
-			/* --------------------- CUSTOM GRID --------------------- */
-			body {
-			  margin: 0;
-			}
+		.container {
+			width: 1024px;
+			margin: 0px auto;
+			text-align: center;
+		}
 
-			.container *{
-			  box-sizing: border-box; 
-			}
+		.row:before,
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
 
+		[class*='col-'] {
+			float: left;
+			min-height: 1px;
+			width: 170.67px;
+			padding: 25px;
+		}
+
+		.col-1 { width: 16.67%; }
+		.col-2 { width: 33.33%; }
+		.col-3 { width: 50%;    }
+		.col-4 { width: 66.67%; }
+		.col-5 { width: 83.33%; }
+		.col-6 { width: 100%;   }
+
+		/* -------------------- CUSTOM FONTS -------------------- */
+
+		@font-face {
+			font-family: DisplayProReg;
+			src: url(fonts/PFDinDisplayPro-Regular.ttf);
+		}
+
+		@font-face {
+			font-family: DisplayProBold;
+			src: url(fonts/PFDinDisplayPro-Bold.ttf);
+			font-weight: bold;
+		}
+
+		@font-face {
+			font-family: TextProReg;
+			src: url(fonts/PFDinTextPro-Regular.ttf);
+		}
+
+		@font-face {
+			font-family: TextProBold;
+			src: url(fonts/PFDinTextPro-Bold.ttf);
+			font-weight: bold;
+		}
+
+		/* --------------- HEADERS / PARAGRAPHS --------------- */
+
+		h1 {
+			font-family: DisplayProBold;
+			font-size: 5em;
+			margin: 0px;
+		}
+
+		h2 {
+			font-family: DisplayProBold;
+			font-size: 2.5em;
+			margin: 0px;
+		}
+
+		h3 {
+			font-family: TextProBold;
+			font-size: 2em;
+			margin: 0px;
+		}
+
+		h4 {
+			font-family: DisplayProBold;
+			font-size: 1.5em;
+			margin: 0px;
+		}
+
+		h5 {
+			font-family: TextProBold;
+			font-size: 1.25em;
+			margin: 0px;
+		}
+
+		p {
+			font-family: DisplayProReg;
+			font-size: 22px;
+			margin: 0px;
+		}
+
+		/* --------------------- HEADER --------------------- */
+
+		#header {
+			color: #5C2C81;
+			height: 300px;
+			background: 
+				url(img/header-dots.png),
+				url(img/header-bm.png);
+			background-repeat: repeat-x, no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+
+		.logos {
+			float: left;
+			padding-top: 75px;
+		}
+
+		.logos img {
+			width: 300px;
+		}
+
+		.vote {
+			float: right;
+			padding-top: 40px;
+			padding-right: 55px;
+		}
+
+		#purple-bar {
+			height: 5px;
+			background-color: #5C2C81;
+		}
+
+		/* --------------------- VIDEO --------------------- */
+
+		#video {
+			color: #FFF;
+			background-color: #000;
+		}
+
+		#video p {
+			font-size: 18px;
+		}
+
+		#video h4 {
+			margin: 25px;
+		}
+
+		/* --------------------- STORY --------------------- */
+
+		#story {
+		  color: #000;
+			height: 650px;
+			background: url(img/story-full-court.png);
+			background-color: #000;
+			background-repeat: no-repeat;
+			background-size: 100%;
+		}
+
+		#post-story {
+			color: #FFF;
+			background-color: #000;
+		}
+
+		.story-content {
+			float: right;
+			width: 45%;
+			margin: 110px 110px 0px 110px;
+			text-align: center;
+		}
+
+		.story-content img {
+			margin-bottom: 25px;
+		}
+
+		/* -------------------- VOTING -------------------- */
+
+		#voting {
+			color: #000;
+			height: auto;
+			padding-top: 15px;
+			background: url(img/footer-dots.png);
+			background-color: #E6E6E6;
+		}
+
+		.social {
+			float: left;
+			width: 33.33%;
+		}
+
+		i {
+			color: #5C2C81;
+			margin-bottom: 20px;
+		}
+
+		.post {
+			font-family: TextProReg;
+			font-size: 16px;
+			margin-bottom: 15px;
+		}
+
+		.hashtags {
+			font-family: TextProBold;
+			font-size: 16px;
+			color: #5C2C81;
+			margin-bottom: 15px;
+		}
+
+		button {
+			background-color: #5C2C81;
+			border-radius: 5px;
+			border: 0px;
+			box-shadow: 5px 5px rgba(155,155,155,0.6);
+			margin-bottom: 10px;
+			padding: 10px 15px 10px 15px;
+		}
+
+		#voting a {
+			font-family: TextProReg;
+			font-size: 14px;
+			color: #FFF;
+			text-decoration: none;
+		}
+
+		button:hover {
+			background-color: #9B9B9B;
+			box-shadow: 5px 5px rgba(92,44,129,0.6);
+		}
+
+		#voting a:hover {
+			font-family: TextProBold;
+			color: #000;
+		}
+
+		.deadline {
+			margin-top: 20px;
+		}
+
+		/* ---------------- MEDIA QUERIES ---------------- */
+
+		@media handheld, screen and (max-width: 769px) {
 			.container {
-				width: 1024px;
-				margin: 0px auto;
-				text-align: center;
+				width: 100%;
 			}
-
-			.row:before,
-			.row:after {
-				content: "";
-				display: table;
-				clear: both;
-			}
-
-			[class*='col-'] {
-				float: left;
-				min-height: 1px;
-				width: 170.67px;
-				padding: 25px;
-			}
-
-			.col-1 { width: 16.67%; }
-			.col-2 { width: 33.33%; }
-			.col-3 { width: 50%;    }
-			.col-4 { width: 66.67%; }
-			.col-5 { width: 83.33%; }
-			.col-6 { width: 100%;   }
-
-			/* -------------------- CUSTOM FONTS -------------------- */
-
-			@font-face {
-				font-family: DisplayProReg;
-				src: url(fonts/PFDinDisplayPro-Regular.ttf);
-			}
-
-			@font-face {
-				font-family: DisplayProBold;
-				src: url(fonts/PFDinDisplayPro-Bold.ttf);
-				font-weight: bold;
-			}
-
-			@font-face {
-				font-family: TextProReg;
-				src: url(fonts/PFDinTextPro-Regular.ttf);
-			}
-
-			@font-face {
-				font-family: TextProBold;
-				src: url(fonts/PFDinTextPro-Bold.ttf);
-				font-weight: bold;
-			}
-
-			/* --------------- HEADERS / PARAGRAPHS --------------- */
-
-			h1 {
-				font-family: DisplayProBold;
-				font-size: 5em;
-				margin: 0px;
-			}
-
-			h2 {
-				font-family: DisplayProBold;
-				font-size: 2.5em;
-				margin: 0px;
-			}
-
-			h3 {
-				font-family: TextProBold;
-				font-size: 2em;
-				margin: 0px;
-			}
-
-			h4 {
-				font-family: DisplayProBold;
-				font-size: 1.5em;
-				margin: 0px;
-			}
-
-			h5 {
-				font-family: TextProBold;
-				font-size: 1.25em;
-				margin: 0px;
-			}
-
-			p {
-				font-family: DisplayProReg;
-				font-size: 22px;
-				margin: 0px;
-			}
-
-			/* --------------------- HEADER --------------------- */
 
 			#header {
-				color: #5C2C81;
-				height: 300px;
-				background: 
-					url(img/header-dots.png),
-					url(img/header-bm.png);
-				background-repeat: repeat-x, no-repeat;
-				background-position: center;
-				background-size: contain;
+				height: 200px;
+			}
+
+			h1 {
+				font-size: 4em;
 			}
 
 			.logos {
-				float: left;
-				padding-top: 75px;
+				padding-top: 45px;
+				padding-left: 15px;
 			}
 
 			.logos img {
-				width: 300px;
+				width: 215px;
 			}
 
 			.vote {
-				float: right;
-				padding-top: 40px;
-				padding-right: 55px;
+				padding-top: 5px;
 			}
-
-			#purple-bar {
-				height: 5px;
-				background-color: #5C2C81;
-			}
-
-			/* --------------------- VIDEO --------------------- */
-
-			#video {
-				color: #FFF;
-				background-color: #000;
-			}
-
-			#video p {
-				font-size: 18px;
-			}
-
-			#video h4 {
-				margin: 25px;
-			}
-
-			/* --------------------- STORY --------------------- */
 
 			#story {
-			  color: #000;
-				height: 650px;
-				background: url(img/story-full-court.png);
-				background-color: #000;
-				background-repeat: no-repeat;
-				background-size: 100%;
-			}
-
-			#post-story {
-				color: #FFF;
-				background-color: #000;
+				height: 345px;
 			}
 
 			.story-content {
-				float: right;
-				width: 45%;
-				margin: 110px 110px 0px 110px;
-				text-align: center;
+				width: 50%;
+				margin: 45px 45px 0px 45px;
+			}
+
+			.story-content > p {
+				font-size: 16px;
 			}
 
 			.story-content img {
-				margin-bottom: 25px;
+				width: 125px;
+				margin-bottom: 15px;
+			}
+		}
+
+		@media handheld, screen and (max-width: 415px){
+			#header {
+				height: 110px;
 			}
 
-			/* -------------------- VOTING -------------------- */
+			h1 {
+				font-size: 2em;
+			}
+
+			h2 {
+				font-size: 1.25em;
+			}
+
+			h4 {
+				font-size: 1.25em;
+			}
+
+			.logos {
+				padding-top: 30px;
+			}
+
+			.logos img {
+				width: 115px;
+			}
+
+			.vote {
+				padding-top: 10px;
+				padding-right: 35px;
+			}
+
+			#video iframe {
+				width: 300px;
+				height: 215px;
+			}
+
+			#video p {
+				font-size: 16px;
+			}
+
+			#story {
+				height: 195px;
+			}
+
+			.story-content {
+				width: 55%;
+				margin: 18px 10px 0px 0px;
+			}
+
+			.story-content > p {
+				font-size: 10px;
+			}
+
+			.story-content img {
+				width: 55px;
+				margin-bottom: 0px;
+			}
 
 			#voting {
-				color: #000;
-				height: auto;
-				padding-top: 15px;
-				background: url(img/footer-dots.png);
-				background-color: #E6E6E6;
+				background-repeat: no-repeat;
 			}
 
-			.social {
-				float: left;
-				width: 33.33%;
+			.col-2 {
+				width: 100%;
+			}
+		}
+
+		@media handheld, screen and (max-width: 376px){
+			#header {
+				height: 100px;
 			}
 
-			i {
-				color: #5C2C81;
-				margin-bottom: 20px;
+			h1 {
+				font-size: 1.75em;
 			}
 
-			.post {
-				font-family: TextProReg;
-				font-size: 16px;
-				margin-bottom: 15px;
+			h2 {
+				font-size: 1em;
 			}
 
-			.hashtags {
-				font-family: TextProBold;
-				font-size: 16px;
-				color: #5C2C81;
-				margin-bottom: 15px;
+			.logos {
+				padding-top: 25px;
 			}
 
-			button {
-				background-color: #5C2C81;
-				border-radius: 5px;
-				border: 0px;
-				box-shadow: 5px 5px rgba(155,155,155,0.6);
-				margin-bottom: 10px;
-				padding: 10px 15px 10px 15px;
+			.logos img {
+				width: 100px;
 			}
 
-			#voting a {
-				font-family: TextProReg;
-				font-size: 14px;
-				color: #FFF;
-				text-decoration: none;
+			#story {
+				height: 170px;
 			}
 
-			button:hover {
-				background-color: #9B9B9B;
-				box-shadow: 5px 5px rgba(92,44,129,0.6);
+			.story-content {
+				margin: 15px 10px 0px 0px;
 			}
 
-			#voting a:hover {
-				font-family: TextProBold;
-				color: #000;
+			.story-content > p {
+				line-height: 1;
 			}
+		}
+	</style>
+</head>
 
-			.deadline {
-				margin-top: 20px;
+<body>
+	<script type="text/javascript">
+		(function() {
+			$(document).ready(function() {
+				socialHover();
+			})
+
+			var socialHover = function() {
+				$('.social').hover(
+				  function(){
+				    $(this).animate({fontSize: "1.5em", duration: 1000});
+				  },
+				  function(){
+				    $(this).animate({fontSize: "1em", duration: 1000});
+				  }
+				);
 			}
+		})();
+	</script>
 
-			/* ---------------- MEDIA QUERIES ---------------- */
+	<section id="header">
+		<div class="container">
+			<div class="row">
+				<div class="logos">
+					<a href="http://www.nba.com/communityassist/" target="_blank"><img alt="logos" src="img/header-logos.png"></a>
+				</div>
 
-			@media handheld, screen and (max-width: 769px) {
-				.container {
-					width: 100%;
-				}
-
-				#header {
-					height: 200px;
-				}
-
-				h1 {
-					font-size: 4em;
-				}
-
-				.logos {
-					padding-top: 45px;
-					padding-left: 15px;
-				}
-
-				.logos img {
-					width: 215px;
-				}
-
-				.vote {
-					padding-top: 5px;
-				}
-
-				#story {
-					height: 345px;
-				}
-
-				.story-content {
-					width: 50%;
-					margin: 45px 45px 0px 45px;
-				}
-
-				.story-content > p {
-					font-size: 16px;
-				}
-
-				.story-content img {
-					width: 125px;
-					margin-bottom: 15px;
-				}
-			}
-
-			@media handheld, screen and (max-width: 415px){
-				#header {
-					height: 110px;
-				}
-
-				h1 {
-					font-size: 2em;
-				}
-
-				h2 {
-					font-size: 1.25em;
-				}
-
-				h4 {
-					font-size: 1.25em;
-				}
-
-				.logos {
-					padding-top: 30px;
-				}
-
-				.logos img {
-					width: 115px;
-				}
-
-				.vote {
-					padding-top: 10px;
-					padding-right: 35px;
-				}
-
-				#video iframe {
-					width: 300px;
-					height: 215px;
-				}
-
-				#video p {
-					font-size: 16px;
-				}
-
-				#story {
-					height: 195px;
-				}
-
-				.story-content {
-					width: 55%;
-					margin: 18px 10px 0px 0px;
-				}
-
-				.story-content > p {
-					font-size: 10px;
-				}
-
-				.story-content img {
-					width: 55px;
-					margin-bottom: 0px;
-				}
-
-				#voting {
-					background-repeat: no-repeat;
-				}
-
-				.col-2 {
-					width: 100%;
-				}
-			}
-
-			@media handheld, screen and (max-width: 376px){
-				#header {
-					height: 100px;
-				}
-
-				h1 {
-					font-size: 1.75em;
-				}
-
-				h2 {
-					font-size: 1em;
-				}
-
-				.logos {
-					padding-top: 25px;
-				}
-
-				.logos img {
-					width: 100px;
-				}
-
-				#story {
-					height: 170px;
-				}
-
-				.story-content {
-					margin: 15px 10px 0px 0px;
-				}
-
-				.story-content > p {
-					line-height: 1;
-				}
-			}
-		</style>
-	</head>
+				<a href="#voting">
+					<div class="vote">
+						<h1>VOTE</h1>
+						<h2>FOR</h2>
+						<h1>BEN</h1>
+					</div>
+				</a>
+			</div>
+		</div>
+	</section>
 	
-	<body>
-		<section id="header">
-			<div class="container">
-				<div class="row">
-					<div class="logos">
-						<a href="http://www.nba.com/communityassist/" target="_blank"><img alt="logos" src="img/header-logos.png"></a>
-					</div>
+	<div id="purple-bar"></div>
 
-					<a href="#voting">
-						<div class="vote">
-							<h1>VOTE</h1>
-							<h2>FOR</h2>
-							<h1>BEN</h1>
-						</div>
-					</a>
+	<section id="video">
+		<div class="container">
+			<div class="row">
+				<div class="col-6">
+					<p>
+						Our very own Ben McLemore is in the running to receive a $25,000 donation to the non-profit of his choice from, the NBA Cares Community Assist Award presented by Kaiser Permanente.
+					</p>
+
+					<h4>Sometimes, overcoming the odds seems impossible...</h4>
+
+					<iframe width="600" height="315" src="https://www.youtube.com/embed/1Ru5_lHW-SM" frameborder="0" allowfullscreen></iframe>
 				</div>
 			</div>
-		</section>
-		
-		<div id="purple-bar"></div>
+		</div>
+	</section>
 
-		<section id="video">
-			<div class="container">
-				<div class="row">
-					<div class="col-6">
-						<p>
-							Our very own Ben McLemore is in the running to receive a $25,000 donation to the non-profit of his choice from, the NBA Cares Community Assist Award presented by Kaiser Permanente.
-						</p>
+	<section id="story">
+		<div class="story-content">
+			<a href="http://saintjohnsprogram.org/" target="_blank"><img src="img/st-johns-logo.png"></a>
+			<p>
+				The non-profit that Ben has chosen is St. John’s Program for Real Change in Sacramento. The goal of St. Johns is to support homeless women and children to advance from a point of crisis to a position of self-sufficiency. With the $25,000 award, Ben plans on purchasing a van for the facility that can safely transport the children of St. John's to and from school, as well as to after school programs and YMCA Camp during the summer.
+			</p>
+		</div>
+	</section>
 
-						<h4>Sometimes, overcoming the odds seems impossible...</h4>
-
-						<iframe width="600" height="315" src="https://www.youtube.com/embed/1Ru5_lHW-SM" frameborder="0" allowfullscreen></iframe>
-					</div>
+	<section id="post-story">
+		<div class="container">
+			<div class="row">
+				<div class="col-6">
+					<h4>...but for team players and those who work hard, anything is achievable.</h4>
 				</div>
 			</div>
-		</section>
+		</div>
+	</section>
 
-		<section id="story">
-			<div class="story-content">
-				<a href="http://saintjohnsprogram.org/" target="_blank"><img src="img/st-johns-logo.png"></a>
-				<p>
-					The non-profit that Ben has chosen is St. John’s Program for Real Change in Sacramento. The goal of St. Johns is to support homeless women and children to advance from a point of crisis to a position of self-sufficiency. With the $25,000 award, Ben plans on purchasing a van for the facility that can safely transport the children of St. John's to and from school, as well as to after school programs and YMCA Camp during the summer.
-				</p>
-			</div>
-		</section>
-
-		<section id="post-story">
-			<div class="container">
-				<div class="row">
-					<div class="col-6">
-						<h4>...but for team players and those who work hard, anything is achievable.</h4>
-					</div>
+	<section id="voting">
+		<div class="container">
+			<div class="row">
+				<div class="col-6">
+					<h3>VOTE FOR BEN TO WIN & SUPPORT SAINT JOHN'S</h3>
 				</div>
 			</div>
-		</section>
 
-		<section id="voting">
-			<div class="container">
-				<div class="row">
-					<div class="col-6">
-						<h3>VOTE FOR BEN TO WIN & SUPPORT SAINT JOHN'S</h3>
-					</div>
+			<div class="row">
+				<div class="col-2 social">
+					<i class="fa fa-twitter fa-3x"></i>
+					
+					<h5>TWITTER VOTING</h5>
+					<p class="post">Tweet the hashtags,<br>retweets count</p>
+					<p class="hashtags">#NBACommunityAssist<br>#BenMcLemore</p>
+					
+					<button><a href="https://twitter.com/intent/tweet?hashtags=NBACommunityAssist,BenMcLemore" target="_blank">TWEET NOW</a></button>
 				</div>
 
-				<div class="row">
-					<div class="col-2 social">
-						<i class="fa fa-twitter fa-3x"></i>
-						
-						<h5>TWITTER VOTING</h5>
-						<p class="post">Tweet the hashtags,<br>retweets count</p>
-						<p class="hashtags">#NBACommunityAssist<br>#BenMcLemore</p>
-						
-						<button><a href="https://twitter.com/intent/tweet?hashtags=NBACommunityAssist,BenMcLemore" target="_blank">TWEET NOW</a></button>
-					</div>
+				<div class="col-2 social">
+					<i class="fa fa-facebook fa-3x"></i>
+					
+					<h5>FACEBOOK VOTING</h5>
+					<p class="post">Post a status update<br>with the hashtags</p>
+					<p class="hashtags">#NBACommunityAssist<br>#BenMcLemore</p>
 
-					<div class="col-2 social">
-						<i class="fa fa-facebook fa-3x"></i>
-						
-						<h5>FACEBOOK VOTING</h5>
-						<p class="post">Post a status update<br>with the hashtags</p>
-						<p class="hashtags">#NBACommunityAssist<br>#BenMcLemore</p>
-
-						<button><a href="https://www.facebook.com/" target="_blank">POST NOW</a></button>
-					</div>
-
-					<div class="col-2 social">
-						<i class="fa fa-instagram fa-3x"></i>
-						
-						<h5>INSTAGRAM VOTING</h5>
-						<p class="post">Post a photo or video<br>with the hashtags</p>
-						<p class="hashtags">#NBACommunityAssist<br>#BenMcLemore</p>
-
-						<button><a href="https://instagram.com/" target="_blank">POST NOW</a></button>
-					</div>
+					<button><a href="https://www.facebook.com/" target="_blank">POST NOW</a></button>
 				</div>
 
-				<div class="row">
-					<div class="col-6 deadline">
-						<p>
-							Voting is for one week only – Monday, April 20 through Monday, April 27 – with the winner being selected as early as Tuesday, April 28.
-						</p>
-					</div>
+				<div class="col-2 social">
+					<i class="fa fa-instagram fa-3x"></i>
+					
+					<h5>INSTAGRAM VOTING</h5>
+					<p class="post">Post a photo or video<br>with the hashtags</p>
+					<p class="hashtags">#NBACommunityAssist<br>#BenMcLemore</p>
+
+					<button><a href="https://instagram.com/" target="_blank">POST NOW</a></button>
 				</div>
 			</div>
-		</section>
 
-	</body>
+			<div class="row">
+				<div class="col-6 deadline">
+					<p>
+						Voting is for one week only – Monday, April 20 through Monday, April 27 – with the winner being selected as early as Tuesday, April 28.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</body>
 </html>
