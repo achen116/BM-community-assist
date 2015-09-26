@@ -215,8 +215,19 @@ button {
 
 a {
 	font-family: TextProReg;
+	font-size: 14px;
 	color: #FFF;
 	text-decoration: none;
+}
+
+button:hover {
+	background-color: #9B9B9B;
+	box-shadow: 5px 5px rgba(92,44,129,0.6);
+}
+
+a:hover {
+	font-family: TextProBold;
+	color: #000;
 }
 
 .deadline {
