@@ -213,7 +213,7 @@ button {
 	padding: 10px 15px 10px 15px;
 }
 
-a {
+#voting a {
 	font-family: TextProReg;
 	font-size: 14px;
 	color: #FFF;
@@ -225,7 +225,7 @@ button:hover {
 	box-shadow: 5px 5px rgba(92,44,129,0.6);
 }
 
-a:hover {
+#voting a:hover {
 	font-family: TextProBold;
 	color: #000;
 }
