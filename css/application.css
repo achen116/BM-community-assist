@@ -100,12 +100,13 @@ p {
 
 #header {
 	color: #5C2C81;
-	height: 300px;
+	height: auto;
 	background: 
 		url(../img/header-dots.png),
 		url(../img/header-bm.png);
 	background-repeat: no-repeat;
 	background-position: center;
+	background-size: contain;
 }
 
 .logos {
@@ -174,9 +175,10 @@ p {
 
 #voting {
 	color: #000;
-	height: 600px;
+	height: auto;
 	padding-top: 15px;
 	background: url(../img/footer-dots.png);
+	background-color: #E6E6E6;
 }
 
 .social {
@@ -215,4 +217,105 @@ button {
 
 .deadline {
 	margin-top: 20px;
+}
+
+/* ---------------- MEDIA QUERIES ---------------- */
+
+@media(max-width: 768px) {
+	.container {
+		width: 768px;
+	}
+
+	h1 {
+		font-size: 4em;
+	}
+
+	.logos {
+		padding-top: 45px;
+		padding-left: 15px;
+	}
+
+	.logos img {
+		width: 215px;
+	}
+
+	.vote {
+		padding-top: 5px;
+	}
+
+	#story {
+		height: 345px;
+	}
+
+	.story-content {
+		width: 50%;
+		margin: 45px 45px 0px 45px;
+	}
+
+	.story-content > p {
+		font-size: 16px;
+	}
+
+	.story-content > img {
+		width: 125px;
+		margin-bottom: 15px;
+	}
+}
+
+@media(max-width: 434px){
+	.container {
+		width: 434px;
+	}
+
+	h1 {
+		font-size: 2em;
+	}
+
+	h2 {
+		font-size: 1.25em;
+	}
+
+	.logos {
+		padding-top: 30px;
+	}
+
+	.logos img {
+		width: 115px;
+	}
+
+	.vote {
+		padding-top: 10px;
+		padding-right: 35px;
+	}
+
+	#video iframe {
+		width: 375px;
+		height: 215px;
+	}
+
+	#story {
+		height: 195px;
+	}
+
+	.story-content {
+		width: 55%;
+		margin: 18px 0px 0px 0px;
+	}
+
+	.story-content > p {
+		font-size: 10px;
+	}
+
+	.story-content > img {
+		width: 75px;
+		margin-bottom: 0px;
+	}
+
+	#voting {
+		background-repeat: no-repeat;
+	}
+
+	.col-2 {
+		width: 100%;
+	}
 }
