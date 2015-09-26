@@ -368,6 +368,10 @@ button:hover {
 		width: 100px;
 	}
 
+	#story {
+		height: 170px;
+	}
+
 	.story-content {
 		margin: 15px 10px 0px 0px;
 	}
