@@ -104,7 +104,7 @@ p {
 	background: 
 		url(../img/header-dots.png),
 		url(../img/header-bm.png);
-	background-repeat: no-repeat;
+	background-repeat: repeat, no-repeat;
 	background-position: center;
 	background-size: contain;
 }
